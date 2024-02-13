@@ -51,8 +51,8 @@ class Console
                     // We found a file. Does its filename end in 'Command.php'?
                     if (str_ends_with($filepath, 'Command.php')) {
                         // Build the class name and store it in the class name array.
-                        $pathinfo = pathinfo($filepath);
-                        $commandClassNames[] = $namespace . '\\' . $pathinfo['filename'];
+                        $pathInfo = pathinfo($filepath);
+                        $commandClassNames[] = $namespace . '\\' . $pathInfo['filename'];
                     }
                 } elseif ($filename !== '.' && $filename !== '..') {
                     // We found a directory (different from "." and ".."). Recursively get the class names
